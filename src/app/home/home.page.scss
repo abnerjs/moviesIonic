@@ -25,3 +25,19 @@
 #container a {
   text-decoration: none;
 }
+
+#navigatorButtons {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+#navigatorButtons div {
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
