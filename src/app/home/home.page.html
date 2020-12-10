@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Moviepedia
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
   </div>
+
+  <ion-row id='navigatorButtons'>
+    <ion-col size="5">
+      <ion-button expand="full" color="primary" (click)="anterior()">
+        <ion-label>Anterior</ion-label>
+        <ion-icon slot='start' name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size='2'><span> {{pagina}}/{{totalPages}} </span></ion-col>
+    <ion-col size="5">
+      <ion-button expand="full" color="primary" (click)="proximo()">
+        <ion-label>Próximo</ion-label>
+        <ion-icon slot='end' name="arrow-forward-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>
