@@ -26,6 +26,10 @@ export class HomePage {
     this.carregarFilmes();
   }
 
+  formatUrl(backdrop_path) {
+    return `https://image.tmdb.org/t/p/w500/${backdrop_path}`;
+  }
+
   carregarFilmes() {
       this.filmeService.getMovies(this.pagina).subscribe((sucess: any) => {
         console.log(sucess);

@@ -13,10 +13,10 @@ export class MovieService {
 
   public getMovies(page: number) {
     return this.http.get(`${this.baseURI}/movie/popular?api_key=${environment.movies}&page=${page}`);
-  } 
+  }
 
   public getGenresForMovies() {
-    return this.http.get(`${this.baseURI}/genre/movie/list?api_key=${environment.movies}`)
+    return this.http.get(`${this.baseURI}/genre/movie/list?api_key=${environment.movies}`);
   }
-  
+
 }
