@@ -12,7 +12,7 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   public getMovies(page: number) {
-    return this.http.get(`${this.baseURI}/movie/popular?api_key=${environment.movies}&page=${page}`);
+    return this.http.get(`${this.baseURI}/movie/popular?api_key=${environment.movies}&language=pt-BR&page=${page}`);
   }
 
   public getGenresForMovies() {
