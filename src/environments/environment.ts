@@ -1,6 +1,6 @@
-import { chave } from "./api-key";
+import { key } from "./api-key";
 
 export const environment = {
   production: false,
-  movies: chave
+  movies: key
 };
