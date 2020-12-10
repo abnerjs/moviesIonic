@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: "app-home",
@@ -11,7 +12,7 @@ export class HomePage {
   public total: number;
   public genres = {};
 
-  constructor(public filmeService: FilmeService) {
+  constructor(public filmeService: MovieService) {
     this.carregarFilmes();
   }
 
