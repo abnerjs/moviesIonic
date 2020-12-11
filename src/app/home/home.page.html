@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true" id='cnt'>
   <div id="content">
   <div id="container">
-    <ion-card *ngFor="let movie of listaFilmes">
+    <ion-card *ngFor="let movie of listaFilmes" class='icard'>
       <img *ngIf="movie.backdrop_path" [src]="formatUrl(movie.backdrop_path)"  class='icard-movie'/>
       <ion-card-header>
         <h1>{{movie.title}}</h1>
@@ -16,7 +16,7 @@
           <li>{{movie.vote_average}} <ion-icon name="star-outline"></ion-icon></li>
         </ul>
       </ion-card-header><br/>
-      <ion-card-content> {{movie.overview}} </ion-card-content>
+      <ion-card-content class="movie-description"> {{movie.overview}} </ion-card-content>
     </ion-card>
   </div>
   </div>
