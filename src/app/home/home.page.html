@@ -4,16 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id='cnt'>
+  <div id="content">
   <div id="container">
     <ion-card *ngFor="let movie of listaFilmes">
-      <img *ngIf="movie.backdrop_path" [src]="formatUrl(movie.backdrop_path)" />
+      <img *ngIf="movie.backdrop_path" [src]="formatUrl(movie.backdrop_path)"  class='icard-movie'/>
       <ion-card-header>
-        <ion-card-title>{{movie.title}}</ion-card-title>
-        <ion-card-subtitle>{{movie.release_date}}</ion-card-subtitle>
-      </ion-card-header>
+        <h1>{{movie.title}}</h1>
+        <ul class="movie-gen">
+          <li>{{movie.release_date}}  /</li>
+          <li>2h 49min  /</li>
+        </ul>
+      </ion-card-header><br/>
       <ion-card-content> {{movie.overview}} </ion-card-content>
     </ion-card>
+  </div>
   </div>
 
   <ion-row id="navigatorButtons">
